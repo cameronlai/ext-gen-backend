@@ -29,12 +29,10 @@ def main(request):
     # Return results
     schedule = t.run(verbose=True)
     examEvents = convertScheduleToExamEvents(schedule, timeSlots)
-    ret = parseResult(examEvents)
-    # Set CORS headers for main requests
-    headers = {
-        'Access-Control-Allow-Origin': '*',        
-    }
-    return ("hello", 200, headers)
+    result = parseResult(examEvents)
+    resp = jsonify(result)
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
 
 def getExamEvent(title, start, end):
     examEvent = {}
