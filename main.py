@@ -31,10 +31,7 @@ def main(request):
     examEvents = convertScheduleToExamEvents(schedule, timeSlots)
     result = parseResult(examEvents)
     resp = jsonify(result)
-    resp.headers['Access-Control-Allow-Origin'] = '*'
-    resp.headers['Access-Control-Allow-Methods'] = 'POST'
-    resp.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    resp.headers['Access-Control-Max-Age'] = '3600'
+    resp.headers['Access-Control-Allow-Origin'] = 'https://cameronlai.com'
     return resp
 
 def getExamEvent(title, start, end):
