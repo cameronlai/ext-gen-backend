@@ -34,7 +34,7 @@ def main(request):
     headers = {
         'Access-Control-Allow-Origin': '*',        
     }
-    return (jsonify(ret), 200, headers)
+    return ("hello", 200, headers)
 
 def getExamEvent(title, start, end):
     examEvent = {}
