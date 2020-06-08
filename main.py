@@ -32,6 +32,9 @@ def main(request):
     result = parseResult(examEvents)
     resp = jsonify(result)
     resp.headers['Access-Control-Allow-Origin'] = '*'
+    resp.headers['Access-Control-Allow-Methods'] = 'POST'
+    resp.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    resp.headers['Access-Control-Max-Age'] = '3600'
     return resp
 
 def getExamEvent(title, start, end):
