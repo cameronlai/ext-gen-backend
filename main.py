@@ -8,7 +8,7 @@ inputDateTimeFormat = "%Y-%m-%d,%H:%M"
 dateFormat = "%Y-%m-%d"
 timeFormat = "%Y-%m-%dT%H:%M:%S"
 
-def http(request):
+def main(request):
     # Load data from body
     if not request.json:
         abort(400)
