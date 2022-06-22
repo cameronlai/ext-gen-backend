@@ -4,6 +4,6 @@ Flask==1.1.2
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
-numpy==1.18.5
+numpy==1.22.0
 tabulate==0.8.7
 Werkzeug==1.0.1
